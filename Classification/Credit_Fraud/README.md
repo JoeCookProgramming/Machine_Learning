@@ -4,5 +4,9 @@ In this classification problem we will be classifying credit card transactions a
 \
 For this problem we will be using an artificial neural network.\
 \
-The [dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud) has been removed due to its size.
+The [dataset](https://www.kaggle.com/mlg-ulb/creditcardfraud) has been removed due to its size.\
+\
+Output Confusion Matrix:\
+![Confusion Matrix](Saved_Models/Images/confusion_matrix.png)
+
 
