@@ -1,8 +1,13 @@
 import pandas as pd
 import numpy as np
 
+# Get filepath of dataset
+from os import path
+directory = path.dirname(__file__)
+filepath = path.abspath(path.join(directory,"..","Datasets","train.csv"))
+
 # Get dataset and split
-dataset = pd.read_csv(r"Datasets/train.csv")
+dataset = pd.read_csv(filepath)
 dataset = pd.get_dummies(dataset,columns=["price_range"],prefix=["price_range"])
 X = dataset.iloc[:,0:-4].values
 y = dataset.iloc[:,-4:].values
