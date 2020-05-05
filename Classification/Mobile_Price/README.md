@@ -8,4 +8,4 @@ Multiple different models have been used to predict which of the four classes th
 - [K Nearest Neighbours](KNN)
 - [Naive Bayes](Naive_Bayes)
 - [Support Vector Machine](SVM)
-- [Gradient Boosting](XGBoost)
+- [Gradient Boost](Gradient_Boost)
