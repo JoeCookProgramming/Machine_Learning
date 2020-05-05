@@ -67,20 +67,20 @@ except:
 y_pred = classifier.predict(X_test)
 
 # Ensure that the model only predicts as not fraud if its 99% sure
-y_pred = (y_pred > 0.99)
+y_pred = (y_pred > 0.01)
+print(y_pred)
 
 # Making the Confusion Matrix
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
-
+print(cm)
 df_cm = pd.DataFrame(cm, index = (0, 1), columns = (0, 1))
-
 plt.figure(figsize = (10,7))
 sns.set(font_scale=1.4)
 sns.heatmap(df_cm, annot=True, fmt='g')
 plt.title("Confusion Matrix ANN")
-plt.xlabel("Actual")
-plt.ylabel("Predicted")
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
 plt.savefig(r'Saved_Models/Images/confusion_matrix.png')
 plt.show()
 
