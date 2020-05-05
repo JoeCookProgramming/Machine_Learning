@@ -1,3 +1,3 @@
 # Machine Learning
 ## Classification
-## Artificial Neural Network
+## Naive Bayes
