@@ -13,10 +13,10 @@ X = dataset.iloc[:,0:-1].values
 y = dataset.iloc[:,-1].values
 #y_columns = dataset.iloc[:,-4:].columns
 
-# Standardise the data
-from sklearn.preprocessing import StandardScaler
-sc = StandardScaler()
-X = sc.fit_transform(X)
+# # Standardise the data
+# from sklearn.preprocessing import StandardScaler
+# sc = StandardScaler()
+# X = sc.fit_transform(X)
 
 #Splitting into training and test datasets
 from sklearn.model_selection import train_test_split
@@ -35,7 +35,7 @@ cm = confusion_matrix(y_test, y_pred)
 from sklearn.metrics import classification_report
 
 
-testCombo = sc.fit_transform(np.array([
+testCombo = (np.array([
     [842,0,2.2,0,1,0,7,0.6,188,2,2,20,756,2549,9,7,19,0,0,1],
     [1021,1,0.5,1,0,1,53,0.7,136,3,6,905,1988,2631,17,3,7,1,1,0],
     [563,1,0.5,1,2,1,41,0.9,145,5,6,1263,1716,2603,11,2,9,1,1,0],

@@ -22,9 +22,9 @@ y = dataset.iloc[:,-1].values
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.1, random_state=0, stratify=y)
 
-from sklearn.ensemble import RandomForestClassifier
-model = RandomForestClassifier(n_estimators=250,max_depth=20,criterion='entropy', random_state=0)
-model.fit(X_train,y_train)
+from xgboost import XGBClassifier
+model = XGBClassifier(n_estimators=100, learning_rate= 0.1, gamma=2)
+model.fit(X_train, y_train)
 
 y_pred = model.predict(X_test)
 
